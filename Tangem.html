@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Crypto Wallet Dashboard</title>
+    <link rel="icon" type="image/png" href="ico.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#1A1A1A", "background-light": "#f7f7f7", "background-dark": "#191919", "surface-light": "#FFFFFF", "surface-dark": "#1C1C1E", "surface-darker": "#141414", "text-secondary": "#9CA3AF", "accent-green": "#34D399", "accent-red": "#EF4444", "accent-blue": "#3B82F6" }, fontFamily: { sans: ["Inter", "sans-serif"], display: "Spline Sans" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "18": "4.5rem" } } } };</script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B5563;
+        }
+
+        .glass-panel {
+            background: rgba(28, 28, 30, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-sans antialiased min-h-screen flex flex-col transition-colors duration-300">
+    <header class="w-full px-6 py-4 flex items-center justify-between max-w-5xl mx-auto">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 flex items-center justify-center">
+                <img src="ico.png" alt="Tangem Logo" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-xl font-bold tracking-tight">tangem</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button
+                class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors text-gray-500 dark:text-gray-400"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-icons-outlined text-xl">brightness_4</span>
+            </button>
+            <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors">
+                <span class="material-icons-outlined">more_vert</span>
+            </button>
+        </div>
+    </header>
+    <main class="flex-grow w-full max-w-2xl mx-auto px-4 py-6 pb-32">
+        <div
+            class="bg-white dark:bg-surface-dark rounded-3xl p-6 mb-6 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-gray-100 to-transparent dark:from-white/5 dark:to-transparent rounded-bl-full opacity-50 pointer-events-none">
+            </div>
+            <div class="relative z-10 flex justify-between items-start">
+                <div>
+                    <h2 class="text-gray-500 dark:text-gray-400 font-medium text-sm mb-1">Wallet</h2>
+                    <div class="text-4xl font-bold mb-2 tracking-tight">A$247,80</div>
+                    <div class="flex items-center text-xs text-gray-500 dark:text-gray-500 font-medium">
+                        <span>2 devices</span>
+                        <span class="mx-1.5 text-gray-300 dark:text-gray-600">•</span>
+                        <span>Seed phrase</span>
+                    </div>
+                </div>
+                <div
+                    class="relative w-24 h-32 mr-2 transform rotate-0 hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute top-0 right-0 w-20 h-32 bg-gray-300 dark:bg-gray-700 rounded-xl transform translate-x-3 translate-y-1 shadow-lg border border-gray-200 dark:border-gray-600">
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 w-20 h-32 bg-black text-white rounded-xl shadow-xl flex flex-col justify-end p-2 border border-gray-800">
+                        <div class="opacity-20 absolute top-4 right-2 text-2xl">
+                            <span class="material-icons-outlined">nfc</span>
+                        </div>
+                        <div
+                            class="font-bold text-xs opacity-80 tracking-widest transform -rotate-90 absolute bottom-8 -left-5">
+                            TANGEM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mb-8">
+            <button
+                class="bg-white dark:bg-surface-dark py-3 px-4 rounded-2xl font-medium shadow-sm hover:bg-gray-50 dark:hover:bg-surface-darker active:scale-95 transition-all flex items-center justify-center space-x-2 group">
+                <span class="material-icons-outlined text-lg group-hover:scale-110 transition-transform">add</span>
+                <span>Buy</span>
+            </button>
+            <button
+                class="bg-white dark:bg-surface-dark py-3 px-4 rounded-2xl font-medium shadow-sm hover:bg-gray-50 dark:hover:bg-surface-darker active:scale-95 transition-all flex items-center justify-center space-x-2 group">
+                <span
+                    class="material-icons-outlined text-lg group-hover:scale-110 transition-transform">swap_vert</span>
+                <span>Swap</span>
+            </button>
+            <button
+                class="bg-white dark:bg-surface-dark py-3 px-4 rounded-2xl font-medium shadow-sm hover:bg-gray-50 dark:hover:bg-surface-darker active:scale-95 transition-all flex items-center justify-center space-x-2 group">
+                <span
+                    class="material-icons-outlined text-lg group-hover:scale-110 transition-transform">attach_money</span>
+                <span>Sell</span>
+            </button>
+        </div>
+        <div class="bg-white dark:bg-surface-dark rounded-3xl p-1 shadow-sm overflow-hidden mb-6">
+            <div class="flex flex-col">
+                <div
+                    class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-surface-darker rounded-2xl transition-colors cursor-pointer group">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative w-10 h-10 rounded-full bg-blue-100 overflow-hidden flex-shrink-0">
+                            <img alt="Pudgy Penguins Avatar" class="w-full h-full object-cover" src="pengu.png" />
+                            <div
+                                class="absolute bottom-0 right-0 w-4 h-4 bg-black rounded-full border-2 border-white dark:border-surface-dark flex items-center justify-center">
+                                <span class="text-[8px] text-white font-bold">Ξ</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-base">Pudgy Penguins</div>
+                            <div class="flex items-center text-xs space-x-2 mt-0.5">
+                                <span class="text-gray-500 dark:text-gray-400">A$0,02</span>
+                                <span class="text-accent-blue flex items-center font-medium">
+                                    <span class="material-icons-outlined text-[10px] mr-0.5">arrow_drop_up</span>
+                                    7,11 %
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-semibold text-base">A$181,15</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-0.5">PENGU 10.478,026047</div>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-surface-darker rounded-2xl transition-colors cursor-pointer group border-t border-gray-100 dark:border-white/5">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-700 flex items-center justify-center flex-shrink-0 text-black dark:text-white font-bold text-lg overflow-hidden">
+                            <img alt="XRP Logo" class="w-full h-full object-cover" src="xrp.png" />
+                        </div>
+                        <div>
+                            <div class="font-semibold text-base">XRP Ledger</div>
+                            <div class="flex items-center text-xs space-x-2 mt-0.5">
+                                <span class="text-gray-500 dark:text-gray-400">A$3,21</span>
+                                <span class="text-accent-blue flex items-center font-medium">
+                                    <span class="material-icons-outlined text-[10px] mr-0.5">arrow_drop_up</span>
+                                    4,58 %
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-semibold text-base">A$66,44</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-0.5">XRP 20,720328</div>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-surface-darker rounded-2xl transition-colors cursor-pointer group border-t border-gray-100 dark:border-white/5">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-black dark:bg-gray-900 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <img alt="Solana Logo" class="w-full h-full object-cover" src="solana.png" />
+                        </div>
+                        <div>
+                            <div class="font-semibold text-base">Solana</div>
+                            <div class="flex items-center text-xs space-x-2 mt-0.5">
+                                <span class="text-gray-500 dark:text-gray-400">A$203,53</span>
+                                <span class="text-accent-blue flex items-center font-medium">
+                                    <span class="material-icons-outlined text-[10px] mr-0.5">arrow_drop_up</span>
+                                    1,40 %
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-semibold text-base">A$0,21</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-0.5">SOL 0,00104087</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mb-8">
+            <button
+                class="bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-300 px-6 py-3 rounded-xl text-sm font-semibold flex items-center space-x-2 hover:bg-gray-100 dark:hover:bg-surface-darker transition-colors shadow-sm">
+                <span class="material-icons-outlined text-lg">tune</span>
+                <span>Organize tokens</span>
+            </button>
+        </div>
+    </main>
+    <div class="fixed bottom-0 left-0 right-0 p-4 pb-6 glass-panel border-t border-gray-200 dark:border-white/5">
+        <div class="max-w-2xl mx-auto w-full">
+            <div class="w-12 h-1 bg-gray-300 dark:bg-gray-600 rounded-full mx-auto mb-4 opacity-50"></div>
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <span
+                        class="material-icons-outlined text-gray-400 group-focus-within:text-white transition-colors">search</span>
+                </div>
+                <input
+                    class="block w-full pl-11 pr-4 py-3.5 bg-gray-100 dark:bg-surface-darker border-none rounded-2xl text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-700 transition-all shadow-inner"
+                    placeholder="Search through the market" type="text" />
+            </div>
+        </div>
+    </div>
+    <script>
+        // Force dark mode initially to match screenshot preference, but allow toggle
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.add('dark') // Defaulting to dark for this specific request
+        }
+    </script>
+</body>
+
+</html>
